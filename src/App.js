@@ -1,25 +1,19 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Container from 'react-bootstrap/Container';
+import Header from './Components/Header/Header';
+import Footer from './Components/Footer/Footer';
+import Home from './Components/Home/Home';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+function App(props) {
+	return (
+		// <Container className='container-fluid d-flex justify-content-center'></Container>
+		<div className={props.location.pathname === '/' ? 'App bg' : 'App'}>
+			<Header />
+			<Home />
+			<Footer />
+		</div>
+	);
 }
 
 export default App;
