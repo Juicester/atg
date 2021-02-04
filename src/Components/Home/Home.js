@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './Home.css';
 import Container from 'react-bootstrap/Container';
 import QuestionForm from '../QuestionForm/QuestionForm';
+import Quiz from '../Quiz/Quiz';
 
 function Home() {
 	// set variables and setters
@@ -27,6 +28,8 @@ function Home() {
 				searchString={searchString}
 			/>
 			<h3>{question}</h3>
+
+			<Quiz />
 		</Container>
 	);
 }
