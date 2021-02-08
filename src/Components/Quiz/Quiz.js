@@ -4,39 +4,56 @@ import './Quiz.css';
 function Quiz() {
 	const questions = [
 		{
-			questionText: 'What is the capital of France?',
+			questionText:
+				'Would this decision be the play it safe option or the high risk reward choice?',
 			answerOptions: [
-				{ answerText: 'New York', isCorrect: false },
-				{ answerText: 'London', isCorrect: false },
-				{ answerText: 'Paris', isCorrect: true },
-				{ answerText: 'Dublin', isCorrect: false },
+				{ answerText: 'Very safe and stable', isCorrect: false },
+				{ answerText: 'Fairly safe choice', isCorrect: false },
+				{ answerText: 'Neutral / Not Applicable', isCorrect: false },
+				{ answerText: 'This would be fairly risky', isCorrect: true },
+				{ answerText: 'Go bif or go home!', isCorrect: true },
 			],
 		},
 		{
-			questionText: 'Who is CEO of Tesla?',
+			questionText:
+				'Will this benefit you more in the long term or short term?',
 			answerOptions: [
-				{ answerText: 'Jeff Bezos', isCorrect: false },
-				{ answerText: 'Elon Musk', isCorrect: true },
-				{ answerText: 'Bill Gates', isCorrect: false },
-				{ answerText: 'Tony Stark', isCorrect: false },
+				{ answerText: 'Very much a short term benefit', isCorrect: false },
+				{ answerText: 'Mildly short term', isCorrect: false },
+				{ answerText: 'Neutral / Not Applicable', isCorrect: false },
+				{ answerText: 'Mildly long term', isCorrect: true },
+				{ answerText: 'Very much a long term benefit', isCorrect: true },
 			],
 		},
 		{
-			questionText: 'The iPhone was created by which company?',
+			questionText: 'Who will benefit from this decision more, you or others?',
 			answerOptions: [
-				{ answerText: 'Apple', isCorrect: true },
-				{ answerText: 'Intel', isCorrect: false },
-				{ answerText: 'Amazon', isCorrect: false },
-				{ answerText: 'Microsoft', isCorrect: false },
+				{ answerText: 'Definitely others', isCorrect: false },
+				{ answerText: 'Others', isCorrect: false },
+				{ answerText: 'Neutral / Not Applicable', isCorrect: false },
+				{ answerText: 'Me', isCorrect: true },
+				{ answerText: 'Definitely Me', isCorrect: true },
 			],
 		},
 		{
-			questionText: 'How many Harry Potter books are there?',
+			questionText:
+				'Will this decision lead to more responsibility or more calm and peace of mind?',
 			answerOptions: [
-				{ answerText: '1', isCorrect: false },
-				{ answerText: '4', isCorrect: false },
-				{ answerText: '6', isCorrect: false },
-				{ answerText: '7', isCorrect: true },
+				{ answerText: 'Much more responsibility', isCorrect: false },
+				{ answerText: 'More responsibility', isCorrect: false },
+				{ answerText: 'Neutral / Not Applicable', isCorrect: false },
+				{ answerText: 'More calm', isCorrect: true },
+				{ answerText: 'Much more calm', isCorrect: true },
+			],
+		},
+		{
+			questionText: 'How conventional is this decision?',
+			answerOptions: [
+				{ answerText: 'Very Conventional', isCorrect: false },
+				{ answerText: 'Conventional', isCorrect: false },
+				{ answerText: 'Neutral / Not Applicable', isCorrect: false },
+				{ answerText: "It's kinda out there", isCorrect: true },
+				{ answerText: "It's an off the walls idea", isCorrect: true },
 			],
 		},
 	];
@@ -58,7 +75,7 @@ function Quiz() {
 		}
 	};
 	return (
-		<div className='app'>
+		<div className='quiz'>
 			{showScore ? (
 				<div className='score-section'>
 					You scored {score} out of {questions.length}
@@ -76,6 +93,7 @@ function Quiz() {
 					<div className='answer-section'>
 						{questions[currentQuestion].answerOptions.map((answerOption) => (
 							<button
+								className='answer-button'
 								onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>
 								{answerOption.answerText}
 							</button>

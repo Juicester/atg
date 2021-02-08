@@ -1,12 +1,12 @@
 body {
-	background-color: #7cc6fe;
+	/* background-color: #7cc6fe; */
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	min-height: 100vh;
 }
 
-.app {
+.quiz {
 	background-color: #252d4a;
 	width: 450px;
 	min-height: 200px;
@@ -22,12 +22,14 @@ body {
 	display: flex;
 	font-size: 24px;
 	align-items: center;
+	color: white;
 }
 
 /* QUESTION/TIMER/LEFT SECTION */
 .question-section {
 	width: 100%;
 	position: relative;
+	color: white;
 }
 
 .question-count {
@@ -60,7 +62,7 @@ body {
 	justify-content: space-between;
 }
 
-button {
+.answer-button {
 	width: 100%;
 	font-size: 16px;
 	color: #ffffff;
