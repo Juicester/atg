@@ -11,7 +11,7 @@ function Quiz() {
 				{ answerText: 'Fairly safe choice', isCorrect: false },
 				{ answerText: 'Neutral / Not Applicable', isCorrect: false },
 				{ answerText: 'This would be fairly risky', isCorrect: true },
-				{ answerText: 'Go bif or go home!', isCorrect: true },
+				{ answerText: 'Go big or go home!', isCorrect: true },
 			],
 		},
 		{

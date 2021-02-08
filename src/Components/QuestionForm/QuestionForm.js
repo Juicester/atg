@@ -8,7 +8,7 @@ function QuestionForm(props) {
 	return (
 		<form onSubmit={handleSubmit}>
 			<input
-				placeholder='Search'
+				placeholder='Should I...'
 				type='text'
 				name='searchString'
 				required
@@ -16,7 +16,7 @@ function QuestionForm(props) {
 				value={searchString}
 				className='search-input'
 			/>
-			<button type='submit'>Search</button>
+			<button type='submit'>Ask The Great</button>
 		</form>
 	);
 }
