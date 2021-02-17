@@ -1,0 +1,47 @@
+[
+    {
+        "name": "Abraham Lincoln",
+        "img_url": "Image here!",
+        "stats": {
+            "birthplace": "Hodgenville, Kentucky",
+            "time_period": "1809-1865"
+        },
+        "milestones": {
+            "milestone_0": "16th US President in 1861",
+            "milestone_1": "Signing the Emancipation Proclamation"
+        },
+        "famous_quote": "Four score and seven years ago...",
+        "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    },
+    {
+        "name": "Mahatma Gandhi",
+        "img_url": "Image here!",
+        "stats": {
+            "birthplace": "Gujarat, India",
+            "time_period": "1869-1948"
+        },
+        "milestones": {
+            "milestone_0": "The Development of Satyagraha",
+            "milestone_1": "Achieved Independence for India",
+            "milestone_2": "Fought Against Racial Discrimination in South Africa"
+        },
+        "famous_quote": "An eye for eye only ends up making the whole world blind.",
+        "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    },
+    {
+        "name": "Albert Einstein",
+        "img_url": "Image here!",
+        "stats": {
+            "birthplace": "Ulm, Germany",
+            "time_period": "1879-1955"
+        },
+        "milestones": {
+            "milestone_0": "Proposed the General Theory of Relativity",
+            "milestone_1": "Came up with the Mass-Energy Equivalence formula",
+            "milestone_2": "Won the Nobel Prize for Physics in 1921",
+            "milestone_3": "Was named 'Man of the Century' by TIME Magazine"
+        },
+        "famous_quote": "If you can't explain it simply, you don't understand it well enough.",
+        "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    }
+]
