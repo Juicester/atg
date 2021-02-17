@@ -33,13 +33,13 @@ function Home() {
 			<h3>{question}</h3>
 			<Row className='row justify-content-center'>
 				<Col>
-					<Link to={`/abraham_lincoln`}>Lincoln</Link>
+					<Link to={`/get_to_know/abraham_lincoln`}>Lincoln</Link>
 				</Col>
 				<Col>
-					<Link to={`/mahatma_gandhi`}>Gandhi</Link>
+					<Link to={`/get_to_know/mahatma_gandhi`}>Gandhi</Link>
 				</Col>
 				<Col>
-					<Link to={`/albert_einstein`}>Einstein</Link>
+					<Link to={`/get_to_know/albert_einstein`}>Einstein</Link>
 				</Col>
 			</Row>
 			{/* <Quiz /> */}

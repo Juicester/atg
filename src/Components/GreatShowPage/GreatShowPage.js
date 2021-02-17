@@ -1,5 +1,27 @@
 import React from 'react';
 import './GreatShowPage.css';
+import Image from 'react-bootstrap/Image';
+import Lincoln from '../../images/Abraham_Lincoln_Real.jpg';
+import Gandhi from '../../images/Mahatma_Gandhi_Real.jpg';
+import Einstein from '../../images/Albert_Einstein_Real.jpg';
+
+function imgAdder(greatName) {
+	let img;
+	switch (greatName) {
+		case 'Abraham Lincoln':
+			img = Lincoln;
+			break;
+		case 'Mahatma Gandhi':
+			img = Gandhi;
+			break;
+		case 'Albert Einstein':
+			img = Einstein;
+			break;
+		default:
+			img = '';
+	}
+	return img;
+}
 
 function GreatShowPage(props) {
 	const { name, data } = props;
@@ -10,10 +32,15 @@ function GreatShowPage(props) {
 			great = data[i];
 		}
 	}
+
 	return (
 		<div>
 			<h1>{great.name}</h1>
-			<h2>{great.img_url}</h2>
+			<Image
+				src={imgAdder(great.name)}
+				style={{ width: '18rem' }}
+				roundedCircle
+			/>
 			<h3>{great.stats.birthplace}</h3>
 			<h3>{great.stats.time_period}</h3>
 			<h3>{great.milestones.milestone_0}</h3>

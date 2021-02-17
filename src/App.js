@@ -9,6 +9,9 @@ import Quiz from './Components/Quiz/Quiz';
 import { Route, Switch } from 'react-router-dom';
 import GreatShowPage from './Components/GreatShowPage/GreatShowPage';
 import greatData from './data/greats-data.json';
+import GetToKnow from './Components/GetToKnow/GetToKnow';
+import ContactPage from './Components/ContactPage/ContactPage';
+import HowItWorks from './Components/HowItWorks/HowItWorks';
 
 function App(props) {
 	return (
@@ -18,22 +21,25 @@ function App(props) {
 			<Switch>
 				<Route path={`/`} exact={true} component={Home} />
 				<Route path={`/quiz`} exact={true} component={Quiz} />
+				<Route path={`/get_to_know`} exact={true} component={GetToKnow} />
+				<Route path={`/how_it_works`} exact={true} component={HowItWorks} />
+				<Route path={`/contact`} exact={true} component={ContactPage} />
 				<Route
-					path={`/abraham_lincoln`}
+					path={`/get_to_know/abraham_lincoln`}
 					exact={true}
 					render={() => (
 						<GreatShowPage name={'Abraham Lincoln'} data={greatData} />
 					)}
 				/>
 				<Route
-					path={`/mahatma_gandhi`}
+					path={`/get_to_know/mahatma_gandhi`}
 					exact={true}
 					render={() => (
 						<GreatShowPage name={'Mahatma Gandhi'} data={greatData} />
 					)}
 				/>
 				<Route
-					path={`/albert_einstein`}
+					path={`/get_to_know/albert_einstein`}
 					exact={true}
 					render={() => (
 						<GreatShowPage name={'Albert Einstein'} data={greatData} />
