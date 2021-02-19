@@ -20,10 +20,89 @@ function App(props) {
 			<Header />
 			<Switch>
 				<Route path={`/`} exact={true} component={Home} />
-				<Route path={`/quiz`} exact={true} component={Quiz} />
 				<Route path={`/get_to_know`} exact={true} component={GetToKnow} />
 				<Route path={`/how_it_works`} exact={true} component={HowItWorks} />
 				<Route path={`/contact`} exact={true} component={ContactPage} />
+				<Route
+					path={`/quiz/abraham_lincoln`}
+					exact={true}
+					render={() => (
+						<Quiz
+							name={'Abraham Lincoln'}
+							adviceQuestion={'This is where the question would go'}
+						/>
+					)}
+				/>
+				<Route
+					path={`/quiz/mahatma_Gandhi`}
+					exact={true}
+					render={() => (
+						<Quiz
+							name={'Mahatma Gandhi'}
+							adviceQuestion={'This is where the question would go'}
+						/>
+					)}
+				/>
+				<Route
+					path={`/quiz/albert_einstein`}
+					exact={true}
+					render={() => (
+						<Quiz
+							name={'Albert Einstein'}
+							adviceQuestion={'This is where the question would go'}
+						/>
+					)}
+				/>
+				<Route
+					path={`/quiz/cleopatra`}
+					exact={true}
+					render={() => (
+						<Quiz
+							name={'Cleopatra'}
+							adviceQuestion={'This is where the question would go'}
+						/>
+					)}
+				/>
+				<Route
+					path={`/quiz/martin_luther_king_jr`}
+					exact={true}
+					render={() => (
+						<Quiz
+							name={'Martin Luther King Jr'}
+							adviceQuestion={'This is where the question would go'}
+						/>
+					)}
+				/>
+				<Route
+					path={`/quiz/marilyn_monroe`}
+					exact={true}
+					render={() => (
+						<Quiz
+							name={'Marilyn Monroe'}
+							adviceQuestion={'This is where the question would go'}
+						/>
+					)}
+				/>
+				<Route
+					path={`/quiz/julius_caesar`}
+					exact={true}
+					render={() => (
+						<Quiz
+							name={'Julius Caesar'}
+							adviceQuestion={'This is where the question would go'}
+						/>
+					)}
+				/>
+				<Route
+					path={`/quiz/amelia_earhart`}
+					exact={true}
+					render={() => (
+						<Quiz
+							name={'Amelia Earhart'}
+							adviceQuestion={'This is where the question would go'}
+						/>
+					)}
+				/>
 				<Route
 					path={`/get_to_know/abraham_lincoln`}
 					exact={true}

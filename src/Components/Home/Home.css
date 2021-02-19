@@ -1,1 +1,10 @@
 /* Home CSS File */
+
+.great-card {
+	background-color: wheat;
+}
+
+.row {
+    padding-top: 15px;
+	padding-bottom: 15px;
+}
