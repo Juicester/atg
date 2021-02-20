@@ -16,7 +16,7 @@ function QuestionForm(props) {
 				value={searchString}
 				className='search-input'
 			/>
-			<button type='submit'>Ask The Great</button>
+			<button type='submit'>Ask The Greats</button>
 		</form>
 	);
 }

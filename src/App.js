@@ -27,10 +27,7 @@ function App(props) {
 					path={`/quiz/abraham_lincoln`}
 					exact={true}
 					render={() => (
-						<Quiz
-							name={'Abraham Lincoln'}
-							adviceQuestion={'This is where the question would go'}
-						/>
+						<Quiz name={'Abraham Lincoln'} adviceQuestion={'Move to Tokyo'} />
 					)}
 				/>
 				<Route

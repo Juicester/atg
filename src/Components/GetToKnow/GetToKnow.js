@@ -4,9 +4,9 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { Link } from 'react-router-dom';
 import Card from 'react-bootstrap/Card';
-import Lincoln from '../../images/Abraham_Lincoln_Real.jpg';
-import Gandhi from '../../images/Mahatma_Gandhi_Real.jpg';
-import Einstein from '../../images/Albert_Einstein_Real.jpg';
+import Lincoln from '../../images/The Greats/Abraham Lincoln/Abraham_Lincoln_Face_v1.png';
+import Gandhi from '../../images/The Greats/Mahatma Gandhi/Mahatma_Gandhi_Face_v1.png';
+import Einstein from '../../images/The Greats/Albert Einstein/Albert_Einstein_Face_v1.png';
 
 function GetToKnow(props) {
 	return (

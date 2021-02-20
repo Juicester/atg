@@ -23,7 +23,7 @@ function textAdder(quizScore) {
 	if (quizScore <= -3) {
 		text = 'Disagree';
 	} else if (quizScore <= 3) {
-		text = 'Neutral';
+		text = ' be so, so';
 	} else {
 		text = 'Agree';
 	}
@@ -115,7 +115,7 @@ function Quiz(props) {
 	};
 	return (
 		<Container fluid>
-			<h1>{adviceQuestion}</h1>
+			<h1>Should I {adviceQuestion}</h1>
 			<h2>Before {name} can weigh in,</h2>
 			<h2>just a few questions about this decision:</h2>
 			<div className='quiz'>
@@ -123,7 +123,7 @@ function Quiz(props) {
 					<div>
 						<div className='score-section'>You scored {score} out of 10</div>
 						<h3 className='score-section'>
-							{name} would {textAdder(score)} with {adviceQuestion}
+							{name} would {textAdder(score)} with a {adviceQuestion}
 						</h3>
 						<Image src={imgAdder(score)} style={{ width: '25rem' }} />
 					</div>
