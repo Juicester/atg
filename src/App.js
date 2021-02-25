@@ -23,6 +23,7 @@ function App(props) {
 				<Route path={`/get_to_know`} exact={true} component={GetToKnow} />
 				<Route path={`/how_it_works`} exact={true} component={HowItWorks} />
 				<Route path={`/contact`} exact={true} component={ContactPage} />
+				<Route path={`/quiz/:great/:question`} exact={true} component={Quiz} />
 				<Route
 					path={`/quiz/abraham_lincoln`}
 					exact={true}

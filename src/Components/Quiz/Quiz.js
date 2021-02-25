@@ -91,7 +91,7 @@ function Quiz(props) {
 	const [showScore, setShowScore] = useState(false);
 	const [score, setScore] = useState(0);
 
-	const { name, adviceQuestion } = props;
+	// const { name, adviceQuestion } = props;
 
 	const handleAnswerOptionClick = (isCorrect) => {
 		if (isCorrect === 1) {
@@ -115,15 +115,16 @@ function Quiz(props) {
 	};
 	return (
 		<Container fluid>
-			<h1>Should I {adviceQuestion}</h1>
-			<h2>Before {name} can weigh in,</h2>
+			{/* <h1>Should I {adviceQuestion}</h1>
+			<h2>Before {name} can weigh in,</h2> */}
 			<h2>just a few questions about this decision:</h2>
 			<div className='quiz'>
 				{showScore ? (
 					<div>
 						<div className='score-section'>You scored {score} out of 10</div>
 						<h3 className='score-section'>
-							{name} would {textAdder(score)} with a {adviceQuestion}
+							{/* {name} would {textAdder(score)} with a {adviceQuestion} */}{' '}
+							Filler Text
 						</h3>
 						<Image src={imgAdder(score)} style={{ width: '25rem' }} />
 					</div>

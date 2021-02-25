@@ -3,7 +3,7 @@ import './Home.css';
 import Container from 'react-bootstrap/Container';
 import QuestionForm from '../QuestionForm/QuestionForm';
 import Quiz from '../Quiz/Quiz';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
@@ -16,30 +16,47 @@ import MonroeFace from '../../images/The Greats/Marilyn Monroe/Marilyn_Monroe_Fa
 import EarhartFace from '../../images/The Greats/Amelia Earhart/Emelia_Earhart_Face_v1.png';
 import CaesarFace from '../../images/The Greats/Julius Caesar/Julius_Caesar_Face_v1.png';
 
-function Home() {
+function Home(props) {
 	// set variables and setters
 	const [searchString, setSearchString] = useState('');
+	const [greatString, setGreatString] = useState([]);
+	const [chosenGreat, setChosenGreat] = useState('');
 	const [question, setQuestion] = useState([]);
+	const [toNewPage, setToNewPage] = useState(false);
 
 	// handle event change functions
 	function handleChange(event) {
 		setSearchString(event.target.value);
 	}
+	function handleGreatChange(event) {
+		setGreatString(event.target.value);
+		// console.log(greatString);
+	}
 	function handleSubmit(event) {
 		event.preventDefault();
 		// getGames(searchString);
 		setQuestion(searchString);
+		setChosenGreat(greatString);
+		console.log(window.location);
+		// window.location.assign(`/quiz/${chosenGreat}/${question}`);
+		console.log(chosenGreat);
+		setTimeout(() => setToNewPage(true), 500);
 	}
 
 	return (
 		<Container className='container-fluid justify-content-center'>
+			{toNewPage ? <Redirect to={`/quiz/${chosenGreat}/${question}`} /> : null}
+
 			<h1>Ask The Greats</h1>
 			<QuestionForm
 				handleChange={handleChange}
 				handleSubmit={handleSubmit}
+				handleGreatChange={handleGreatChange}
 				searchString={searchString}
+				greatString={greatString}
 			/>
 			<h3>{question}</h3>
+			<h3>{chosenGreat}</h3>
 			<Row className='row justify-content-center'>
 				<Col>
 					<Card style={{ width: '15rem' }} className='great-card'>
