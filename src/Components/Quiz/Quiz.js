@@ -115,16 +115,16 @@ function Quiz(props) {
 	};
 	return (
 		<Container fluid>
-			{/* <h1>Should I {adviceQuestion}</h1>
-			<h2>Before {name} can weigh in,</h2> */}
+			<h1>Should I {props.match.params.question}</h1>
+			<h2>Before {props.match.params.great} can weigh in,</h2>
 			<h2>just a few questions about this decision:</h2>
 			<div className='quiz'>
 				{showScore ? (
 					<div>
 						<div className='score-section'>You scored {score} out of 10</div>
 						<h3 className='score-section'>
-							{/* {name} would {textAdder(score)} with a {adviceQuestion} */}{' '}
-							Filler Text
+							{props.match.params.great} would {textAdder(score)} with a{' '}
+							{props.match.params.question}
 						</h3>
 						<Image src={imgAdder(score)} style={{ width: '25rem' }} />
 					</div>

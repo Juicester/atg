@@ -1,1 +1,46 @@
 /* QuestionForm CSS File */
+.radio-container input {
+	margin: 0;
+	padding: 0;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+.radio-container input:active + .radio-img {
+	opacity: 0.9;
+}
+.radio-container input:checked + .radio-img {
+	-webkit-filter: none;
+	-moz-filter: none;
+	filter: none;
+}
+
+.radio-img {
+	cursor: pointer;
+	background-size: contain;
+	background-repeat: no-repeat;
+	display: inline-block;
+	width: 100px;
+	height: 70px;
+	-webkit-transition: all 100ms ease-in;
+	-moz-transition: all 100ms ease-in;
+	transition: all 100ms ease-in;
+	-webkit-filter: brightness(1.2) grayscale(0.2) opacity(0.7);
+	-moz-filter: brightness(1.2) grayscale(0.2) opacity(0.7);
+	filter: brightness(1.2) grayscale(0.2) opacity(0.7);
+}
+
+.radio-img:hover {
+	-webkit-filter: brightness(1.2) grayscale(0.5) opacity(0.9);
+	-moz-filter: brightness(1.2) grayscale(0.5) opacity(0.9);
+	filter: brightness(1.2) grayscale(0.5) opacity(0.9);
+}
+
+a:visited {
+	color: #888;
+}
+a {
+	color: #444;
+	text-decoration: none;
+}

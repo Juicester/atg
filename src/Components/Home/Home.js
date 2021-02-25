@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './Home.css';
 import Container from 'react-bootstrap/Container';
 import QuestionForm from '../QuestionForm/QuestionForm';
-import Quiz from '../Quiz/Quiz';
 import { Link, Redirect } from 'react-router-dom';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -34,12 +33,8 @@ function Home(props) {
 	}
 	function handleSubmit(event) {
 		event.preventDefault();
-		// getGames(searchString);
 		setQuestion(searchString);
 		setChosenGreat(greatString);
-		console.log(window.location);
-		// window.location.assign(`/quiz/${chosenGreat}/${question}`);
-		console.log(chosenGreat);
 		setTimeout(() => setToNewPage(true), 500);
 	}
 
@@ -57,7 +52,7 @@ function Home(props) {
 			/>
 			<h3>{question}</h3>
 			<h3>{chosenGreat}</h3>
-			<Row className='row justify-content-center'>
+			{/* <Row className='row justify-content-center'>
 				<Col>
 					<Card style={{ width: '15rem' }} className='great-card'>
 						<Link
@@ -140,8 +135,7 @@ function Home(props) {
 						</Link>
 					</Card>
 				</Col>
-			</Row>
-			{/* <Quiz /> */}
+			</Row> */}
 		</Container>
 	);
 }
