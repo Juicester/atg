@@ -25,101 +25,57 @@ function App(props) {
 				<Route path={`/contact`} exact={true} component={ContactPage} />
 				<Route path={`/quiz/:great/:question`} exact={true} component={Quiz} />
 				<Route
-					path={`/quiz/abraham_lincoln`}
-					exact={true}
-					render={() => (
-						<Quiz name={'Abraham Lincoln'} adviceQuestion={'Move to Tokyo'} />
-					)}
-				/>
-				<Route
-					path={`/quiz/mahatma_Gandhi`}
-					exact={true}
-					render={() => (
-						<Quiz
-							name={'Mahatma Gandhi'}
-							adviceQuestion={'This is where the question would go'}
-						/>
-					)}
-				/>
-				<Route
-					path={`/quiz/albert_einstein`}
-					exact={true}
-					render={() => (
-						<Quiz
-							name={'Albert Einstein'}
-							adviceQuestion={'This is where the question would go'}
-						/>
-					)}
-				/>
-				<Route
-					path={`/quiz/cleopatra`}
-					exact={true}
-					render={() => (
-						<Quiz
-							name={'Cleopatra'}
-							adviceQuestion={'This is where the question would go'}
-						/>
-					)}
-				/>
-				<Route
-					path={`/quiz/martin_luther_king_jr`}
-					exact={true}
-					render={() => (
-						<Quiz
-							name={'Martin Luther King Jr'}
-							adviceQuestion={'This is where the question would go'}
-						/>
-					)}
-				/>
-				<Route
-					path={`/quiz/marilyn_monroe`}
-					exact={true}
-					render={() => (
-						<Quiz
-							name={'Marilyn Monroe'}
-							adviceQuestion={'This is where the question would go'}
-						/>
-					)}
-				/>
-				<Route
-					path={`/quiz/julius_caesar`}
-					exact={true}
-					render={() => (
-						<Quiz
-							name={'Julius Caesar'}
-							adviceQuestion={'This is where the question would go'}
-						/>
-					)}
-				/>
-				<Route
-					path={`/quiz/amelia_earhart`}
-					exact={true}
-					render={() => (
-						<Quiz
-							name={'Amelia Earhart'}
-							adviceQuestion={'This is where the question would go'}
-						/>
-					)}
-				/>
-				<Route
-					path={`/get_to_know/abraham_lincoln`}
+					path={`/get_to_know/Abraham Lincoln`}
 					exact={true}
 					render={() => (
 						<GreatShowPage name={'Abraham Lincoln'} data={greatData} />
 					)}
 				/>
 				<Route
-					path={`/get_to_know/mahatma_gandhi`}
+					path={`/get_to_know/Mahatma Gandhi`}
 					exact={true}
 					render={() => (
 						<GreatShowPage name={'Mahatma Gandhi'} data={greatData} />
 					)}
 				/>
 				<Route
-					path={`/get_to_know/albert_einstein`}
+					path={`/get_to_know/Albert Einstein`}
 					exact={true}
 					render={() => (
 						<GreatShowPage name={'Albert Einstein'} data={greatData} />
+					)}
+				/>
+				<Route
+					path={`/get_to_know/Cleopatra`}
+					exact={true}
+					render={() => <GreatShowPage name={'Cleopatra'} data={greatData} />}
+				/>
+				<Route
+					path={`/get_to_know/Martin Luther King Jr`}
+					exact={true}
+					render={() => (
+						<GreatShowPage name={'Martin Luther King Jr'} data={greatData} />
+					)}
+				/>
+				<Route
+					path={`/get_to_know/Amelia Earhart`}
+					exact={true}
+					render={() => (
+						<GreatShowPage name={'Amelia Earhart'} data={greatData} />
+					)}
+				/>
+				<Route
+					path={`/get_to_know/Julius Caesar`}
+					exact={true}
+					render={() => (
+						<GreatShowPage name={'Julius Caesar'} data={greatData} />
+					)}
+				/>
+				<Route
+					path={`/get_to_know/Marilyn Monroe`}
+					exact={true}
+					render={() => (
+						<GreatShowPage name={'Marilyn Monroe'} data={greatData} />
 					)}
 				/>
 			</Switch>

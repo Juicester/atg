@@ -8,16 +8,61 @@ import { Link } from 'react-router-dom';
 import LincolnNeutral from '../../images/The Greats/Abraham Lincoln/Abraham_Lincoln_neutral.png';
 import LincolnAgree from '../../images/The Greats/Abraham Lincoln/Abraham_Lincoln_agree.png';
 import LincolnDisagree from '../../images/The Greats/Abraham Lincoln/Abraham_Lincoln_disagree.png';
+import GandhiNeutral from '../../images/The Greats/Mahatma Gandhi/Mahatma_Gandhi_neutral.png';
+import GandhiAgree from '../../images/The Greats/Mahatma Gandhi/Mahatma_Gandhi_agree.png';
+import GandhiDisagree from '../../images/The Greats/Mahatma Gandhi/Mahatma_Gandhi_disagree.png';
+import EinsteinNeutral from '../../images/The Greats/Albert Einstein/Albert_Einstein_neutral.png';
+import EinsteinAgree from '../../images/The Greats/Albert Einstein/Albert_Einstein_agree.png';
+import EinsteinDisagree from '../../images/The Greats/Albert Einstein/Albert_Einstein_disagree.png';
+import CleopatraNeutral from '../../images/The Greats/Cleopatra/Cleopatra_neutral.png';
+import CleopatraAgree from '../../images/The Greats/Cleopatra/Cleopatra_agree .png';
+import CleopatraDisagree from '../../images/The Greats/Cleopatra/Cleopatra_disagree.png';
+import MLKNeutral from '../../images/The Greats/Martin Luther King Jr/Martin_Luther_King_Jr_neutral.png';
+import MLKAgree from '../../images/The Greats/Martin Luther King Jr/Martin_Luther_King_Jr_agree.png';
+import MLKDisagree from '../../images/The Greats/Martin Luther King Jr/Martin_Luther_King_Jr_disagree.png';
+import EarhartNeutral from '../../images/The Greats/Amelia Earhart/Amelia_Earhart_neutral.png';
+import EarhartAgree from '../../images/The Greats/Amelia Earhart/Amelia_Earhart_agree.png';
+import EarhartDisagree from '../../images/The Greats/Amelia Earhart/Amelia_Earhart_disagree.png';
+import CaesarNeutral from '../../images/The Greats/Julius Caesar/Julius_Caesar_neutral.png';
+import CaesarAgree from '../../images/The Greats/Julius Caesar/Julius_Caesar_agree.png';
+import CaesarDisagree from '../../images/The Greats/Julius Caesar/Julius_Caesar_disagree.png';
+import MonroeNeutral from '../../images/The Greats/Marilyn Monroe/Marilyn_Monroe_neutral.png';
+import MonroeAgree from '../../images/The Greats/Marilyn Monroe/Marilyn_Monroe_agree.png';
+import MonroeDisagree from '../../images/The Greats/Marilyn Monroe/Marilyn_Monroe_disagree.png';
 import Image from 'react-bootstrap/Image';
 
-function imgAdder(quizScore) {
+function imgAdder(quizScore, greatName) {
 	let img;
 	if (quizScore <= -3) {
-		img = LincolnDisagree;
+		if (greatName === 'Abraham Lincoln') {
+			img = LincolnDisagree;
+		} else if (greatName === 'Mahatma Gandhi') {
+			img = GandhiDisagree;
+		} else if (greatName === 'Martin Luther King Jr') {
+			img = MLKDisagree;
+		} else {
+			img = EinsteinDisagree;
+		}
 	} else if (quizScore <= 3) {
-		img = LincolnNeutral;
+		if (greatName === 'Abraham Lincoln') {
+			img = LincolnNeutral;
+		} else if (greatName === 'Mahatma Gandhi') {
+			img = GandhiNeutral;
+		} else if (greatName === 'Martin Luther King Jr') {
+			img = MLKNeutral;
+		} else {
+			img = EinsteinNeutral;
+		}
 	} else {
-		img = LincolnAgree;
+		if (greatName === 'Abraham Lincoln') {
+			img = LincolnAgree;
+		} else if (greatName === 'Mahatma Gandhi') {
+			img = GandhiAgree;
+		} else if (greatName === 'Martin Luther King Jr') {
+			img = MLKAgree;
+		} else {
+			img = EinsteinAgree;
+		}
 	}
 	return img;
 }
@@ -119,7 +164,7 @@ function Quiz(props) {
 	};
 	return (
 		<Container fluid>
-			<h1>Should I {props.match.params.question}</h1>
+			<h1>Should You {props.match.params.question}</h1>
 			<h2>Before {props.match.params.great} can weigh in,</h2>
 			<h2>just a few questions about this decision:</h2>
 			<div className='quiz'>
@@ -130,7 +175,10 @@ function Quiz(props) {
 							{props.match.params.great} would {textAdder(score)} with a{' '}
 							{props.match.params.question}
 						</h3>
-						<Image src={imgAdder(score)} style={{ width: '25rem' }} />
+						<Image
+							src={imgAdder(score, props.match.params.great)}
+							style={{ width: '25rem' }}
+						/>
 					</div>
 				) : (
 					<>
@@ -158,21 +206,21 @@ function Quiz(props) {
 			</div>
 			<Row>
 				<Col>
-					<Button variant='outline-primary'>
-						<Link to={`/get_to_know/abraham_lincoln`}>
-							More About Abraham Lincoln
+					<Button variant='primary'>
+						<Link to={`/get_to_know/${props.match.params.great}`}>
+							More About {props.match.params.great}
 						</Link>
 					</Button>
 				</Col>
 				<Col>
-					<Button variant='outline-primary'>
+					<Button variant='primary'>
 						<Link to={`/how_it_works`}>More About Our Process</Link>
 					</Button>
 				</Col>
 			</Row>
 			<Row>
 				<Col>
-					<Button variant='outline-primary'>
+					<Button variant='primary'>
 						<Link to={`/`}>Ask Another Question!</Link>
 					</Button>
 				</Col>

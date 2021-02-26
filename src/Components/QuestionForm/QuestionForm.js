@@ -9,7 +9,7 @@ import GandhiFace from '../../images/The Greats/Mahatma Gandhi/Mahatma_Gandhi_Fa
 import EinsteinFace from '../../images/The Greats/Albert Einstein/Albert_Einstein_Face_v1.png';
 import CleopatraFace from '../../images/The Greats/Cleopatra/Cleopatra_Face_v1.png';
 import MLKFace from '../../images/The Greats/Martin Luther King Jr/Martin_Luther_King_Jr_Face_v1.png';
-import EarhartFace from '../../images/The Greats/Amelia Earhart/Emelia_Earhart_Face_v1.png';
+import EarhartFace from '../../images/The Greats/Amelia Earhart/Amelia_Earhart_Face_v1.png';
 import CaesarFace from '../../images/The Greats/Julius Caesar/Julius_Caesar_Face_v1.png';
 import MonroeFace from '../../images/The Greats/Marilyn Monroe/Marilyn_Monroe_Face_v1.png';
 
@@ -27,15 +27,17 @@ function QuestionForm(props) {
 		<Container className='container-fluid justify-content-center'>
 			<form onSubmit={handleSubmit}>
 				<Row>
-					<input
-						placeholder='Should I...'
-						type='text'
-						name='searchString'
-						required
-						onChange={handleChange}
-						value={searchString}
-						className='search-input'
-					/>
+					<Col>
+						<input
+							placeholder='Should I...'
+							type='text'
+							name='searchString'
+							required
+							onChange={handleChange}
+							value={searchString}
+							className='search-input'
+						/>
+					</Col>
 				</Row>
 				<h5>Who's opinion would you like?</h5>
 				<div className='radio-container'>
