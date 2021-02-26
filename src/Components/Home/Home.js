@@ -42,7 +42,10 @@ function Home(props) {
 		<Container className='container-fluid justify-content-center'>
 			{toNewPage ? <Redirect to={`/quiz/${chosenGreat}/${question}`} /> : null}
 
-			<h1>Ask The Greats</h1>
+			<h1>Need Help Making A Decision?</h1>
+			<h3>Find Out What Abraham Lincoln and Other Historical</h3>
+			<h3>Figures Would Do In Your Shoes!</h3>
+
 			<QuestionForm
 				handleChange={handleChange}
 				handleSubmit={handleSubmit}
@@ -52,6 +55,23 @@ function Home(props) {
 			/>
 			<h3>{question}</h3>
 			<h3>{chosenGreat}</h3>
+			<Row>
+				<Col>
+					<p>
+						Should you go back to school? Should you text your Ex? Should you
+						move to tokyo? What ever decision you're contemplating, let the
+						Great Ones help you decide!
+					</p>
+				</Col>
+				<Col>
+					<p>
+						We combine our cutting edge technical algorithms with authentic
+						historical character profiling to allow history's greatest icons to
+						offer you their insight!
+					</p>
+				</Col>
+			</Row>
+
 			{/* <Row className='row justify-content-center'>
 				<Col>
 					<Card style={{ width: '15rem' }} className='great-card'>

@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import './Quiz.css';
 import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Button from 'react-bootstrap/Button';
+import { Link } from 'react-router-dom';
 import LincolnNeutral from '../../images/The Greats/Abraham Lincoln/Abraham_Lincoln_neutral.png';
 import LincolnAgree from '../../images/The Greats/Abraham Lincoln/Abraham_Lincoln_agree.png';
 import LincolnDisagree from '../../images/The Greats/Abraham Lincoln/Abraham_Lincoln_disagree.png';
@@ -152,6 +156,27 @@ function Quiz(props) {
 					</>
 				)}
 			</div>
+			<Row>
+				<Col>
+					<Button variant='outline-primary'>
+						<Link to={`/get_to_know/abraham_lincoln`}>
+							More About Abraham Lincoln
+						</Link>
+					</Button>
+				</Col>
+				<Col>
+					<Button variant='outline-primary'>
+						<Link to={`/how_it_works`}>More About Our Process</Link>
+					</Button>
+				</Col>
+			</Row>
+			<Row>
+				<Col>
+					<Button variant='outline-primary'>
+						<Link to={`/`}>Ask Another Question!</Link>
+					</Button>
+				</Col>
+			</Row>
 		</Container>
 	);
 }
